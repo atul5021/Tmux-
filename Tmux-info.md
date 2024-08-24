@@ -162,3 +162,42 @@
 - **Windows**: `Ctrl+b c` (new), `Ctrl+b ,` (rename), `Ctrl+b &` (close)
 - **Panes**: `Ctrl+b %` (horizontal), `Ctrl+b "` (vertical), `Ctrl+b x` (close)
 - **Session**: `tmux ls`, `tmux attach -t`, `tmux kill-session -t`
+
+## **Creating and Configuring `~/.tmux.conf`**
+
+If the `~/.tmux.conf` file doesn't exist, you can create it and add custom configurations, such as enabling mouse support.
+
+### **Steps to Create and Configure `~/.tmux.conf`**
+
+1. **Check if the file exists**:
+   ```bash
+   ls ~/.tmux.conf
+   ```
+
+2. **Create the `~/.tmux.conf` file** if it doesn't exist:
+   ```bash
+   touch ~/.tmux.conf
+   ```
+
+3. **Open the file in your preferred text editor**:
+   ```bash
+   nano ~/.tmux.conf
+   ```
+   or
+   ```bash
+   vim ~/.tmux.conf
+   ```
+
+4. **Enable mouse support** by adding the following line to the file:
+   ```bash
+   set -g mouse on
+   ```
+
+5. **Save and close the file**.
+
+6. **Reload the Tmux configuration** to apply the changes:
+   ```bash
+   tmux source-file ~/.tmux.conf
+   ```
+
+Now, Tmux will have mouse support enabled, allowing you to interact with panes, windows, and scroll using your mouse.
